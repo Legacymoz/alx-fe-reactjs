@@ -33,8 +33,8 @@ function App() {
         <WelcomeMessage />
 
         <Header />
-        <Footer/>
-        <MainContent/>
+        <MainContent />
+        <Footer />
 
       </div>
       <p className="read-the-docs">
