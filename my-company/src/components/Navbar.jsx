@@ -8,6 +8,7 @@ function Navbar() {
         display: "flex",
         justifyContent: "space-between",
         padding: "10px",
+        backgroundColor: "lightblue",
       }}
     >
       <Link to="/">Home</Link>
