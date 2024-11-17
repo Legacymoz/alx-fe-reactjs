@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import { RecipeList } from './component/recipeList'
-import { AddRecipeForm } from './component/addRecipeForm'
+import { useState } from "react";
+import { RecipeList } from "./RecipeList";
+import { AddRecipeForm } from "./AddRecipeForm";
 
 function App() {
-  
-
   return (
     <div>
       <AddRecipeForm />
-      
-      <RecipeList />
-    
 
+      <RecipeList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
