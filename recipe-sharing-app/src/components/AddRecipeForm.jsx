@@ -1,4 +1,5 @@
-import useRecipeStore from "./store/useRecipeStore";
+import useRecipeStore from "../store/useRecipeStore";
+
 import { useState } from "react";
 
 export const AddRecipeForm = () => {
