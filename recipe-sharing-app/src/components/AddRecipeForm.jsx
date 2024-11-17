@@ -1,4 +1,4 @@
-import useRecipeStore from "../store/useRecipeStore";
+import useRecipeStore from "./RecipeStore";
 
 import { useState } from "react";
 
