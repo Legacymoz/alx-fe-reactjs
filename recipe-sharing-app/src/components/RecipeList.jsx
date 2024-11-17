@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import  useRecipeStore  from "./recipeStore"; // Import Zustand store
+import useRecipeStore from "./recipeStore"; // Import Zustand store
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) => state.recipes);
   const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
+  const favorites = useRecipeStore((state) => state.favorites);
+  const addFavorite = useRecipeStore((state) => state.addFavorite);
   const filterRecipes = useRecipeStore((state) => state.filterRecipes);
 
   // Automatically filter recipes whenever the recipes or search term changes
@@ -17,17 +19,24 @@ const RecipeList = () => {
 
   return (
     <div>
-      {displayRecipes.length > 0 ? (
+      <h2>All Recipes</h2>
+      {displayRecipes.length === 0 ? (
+        <p>No recipes available.</p>
+      ) : (
         displayRecipes.map((recipe) => (
           <div key={recipe.id}>
             <h3>
               <Link to={`/recipe/${recipe.id}`}>{recipe.title}</Link>
             </h3>
             <p>{recipe.description}</p>
+            <button
+              onClick={() => addFavorite(recipe.id)}
+              disabled={favorites.includes(recipe.id)}
+            >
+              {favorites.includes(recipe.id) ? "Favorited" : "Add to Favorites"}
+            </button>
           </div>
         ))
-      ) : (
-        <p>No recipes found</p>
       )}
     </div>
   );
