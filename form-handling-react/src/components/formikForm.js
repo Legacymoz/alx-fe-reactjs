@@ -1,15 +1,14 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as yup from "yup";
+import * as Yup from "yup";
 
 const initialValues = { username: "", email: "", password: "" };
 
-const inputValidation = yup.object().shape({
-  name: yup.string().required("Field is Required"),
-  email: yup
-    .string()
+const inputValidation = Yup.object().shape({
+  name: Yup.string().required("Field is Required"),
+  email: Yup.string()
     .email("Please Enter Valid Email")
     .required("Field is Required"),
-  password: yup.string().min(5).required("Field is Required"),
+  password: Yup.string().min(5).required("Field is Required"),
 });
 
 const onSubmit = (values, { setSubmitting, resetForm }) => {
