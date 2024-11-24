@@ -15,9 +15,10 @@ const PostsComponent = () => {
     "posts",
     fetchPosts,
     {
-      refetchOnWindowFocus: false, // Set this to false to prevent refetching on window focus
-      keepPreviousData: true, // Keeps the previous data while refetching
-      staleTime: 30000, // Optional: How long the data is considered fresh (30 seconds in this case)
+      refetchOnWindowFocus: false, // Prevent refetching on window focus
+      keepPreviousData: true, // Keep previous data while refetching
+      staleTime: 30000, // 30 seconds stale time
+      cacheTime: 600000, // Cache data for 10 minutes
     }
   );
 
