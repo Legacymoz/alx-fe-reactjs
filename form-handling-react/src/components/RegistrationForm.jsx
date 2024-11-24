@@ -4,16 +4,16 @@ const RegistrationForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!username || !email || !password) {
-      setErrorMessage("All fields are required.");
+      setError("All fields are required.");
       return;
     }
-    setErrorMessage("");
+    setError("");
 
     console.log("Form submitted:", { username, email, password });
   };
@@ -41,7 +41,7 @@ const RegistrationForm = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="password...."
       />
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
       <button type="submit">Submit</button>
     </form>
