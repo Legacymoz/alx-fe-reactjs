@@ -1,45 +1,35 @@
+// src/components/PostsComponent.jsx
 import React from "react";
 import { useQuery } from "react-query";
+import axios from "axios";
 
-// Fetch posts from the API
 const fetchPosts = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  if (!res.ok) {
-    throw new Error("Network response was not ok");
-  }
-  return res.json();
+  const response = await axios.get(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  return response.data;
 };
 
 const PostsComponent = () => {
-  const { data, error, isLoading, isError, refetch } = useQuery(
+  const { data, error, isLoading, isError, isFetching, refetch } = useQuery(
     "posts",
     fetchPosts,
     {
-      staleTime: 60000, // Cache data for 1 minute
-      cacheTime: 900000, // Keep cached data for 15 minutes
+      refetchOnWindowFocus: false, // Set this to false to prevent refetching on window focus
+      keepPreviousData: true, // Keeps the previous data while refetching
+      staleTime: 30000, // Optional: How long the data is considered fresh (30 seconds in this case)
     }
   );
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error: {error.message}</div>;
-  }
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>Error: {error.message}</p>;
 
   return (
     <div>
-      <h1>Posts</h1>
-      <button onClick={refetch}>Refetch Data</button>
-      <ul>
-        {data.map((post) => (
-          <li key={post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
-          </li>
-        ))}
-      </ul>
+      <h2>Posts</h2>
+      {isFetching && <p>Loading new data...</p>}
+      <button onClick={() => refetch()}>Refetch Data</button>
+      <ul>{data && data.map((post) => <li key={post.id}>{post.title}</li>)}</ul>
     </div>
   );
 };
