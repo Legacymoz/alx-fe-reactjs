@@ -15,16 +15,16 @@ const RegistrationForm = () => {
     }
     setErrorMessage("");
 
-    console.log("Form submitted:", { name, email, password });
+    console.log("Form submitted:", { username, email, password });
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        name="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        name="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         placeholder="Name...."
       />
       <input
