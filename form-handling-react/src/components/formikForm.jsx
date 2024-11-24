@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 
-const initialValues = { name: "", email: "", password: "" };
+const initialValues = { username: "", email: "", password: "" };
 
 const inputValidation = yup.object().shape({
   name: yup.string().required("Field is Required"),
@@ -26,8 +26,12 @@ const FormikRegistrationForm = () => {
       validationSchema={inputValidation}
     >
       <Form>
-        <Field name="name" placeholder="Name...." />
-        <ErrorMessage name="name" component="div" style={{ color: "red" }} />
+        <Field name="username" placeholder="Name...." />
+        <ErrorMessage
+          name="username"
+          component="div"
+          style={{ color: "red" }}
+        />
 
         <Field name="email" placeholder="Email" />
         <ErrorMessage name="email" component="div" style={{ color: "red" }} />
