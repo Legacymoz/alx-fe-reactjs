@@ -6,7 +6,8 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import the ProtectedRoute component
+import BlogPost from "./components/BlogPost"; // Import BlogPost component
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   return (
@@ -14,14 +15,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-
-        {/* Protected Route */}
+        {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/profile" element={<Profile />}>
             <Route path="details" element={<ProfileDetails />} />
             <Route path="settings" element={<ProfileSettings />} />
           </Route>
         </Route>
+        {/* Dynamic Route for BlogPost */}
+        <Route path="/blog/:id" element={<BlogPost />} />{" "}
+        {/* Add this line for dynamic blog post */}
       </Routes>
     </Router>
   );
