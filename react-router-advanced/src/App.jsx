@@ -2,12 +2,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Login from "./components/Login";
 import Profile from "./components/Profile";
 import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
-import BlogPost from "./components/BlogPost"; // Import the BlogPost component
-import ProtectedRoute from "./components/ProtectedRoute";
-import Login from "./components/Login";
+import ProtectedRoute from "./components/ProtectedRoute"; // Import the ProtectedRoute component
 
 const App = () => {
   return (
@@ -15,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+
         {/* Protected Route */}
         <Route element={<ProtectedRoute />}>
           <Route path="/profile" element={<Profile />}>
@@ -22,8 +22,6 @@ const App = () => {
             <Route path="settings" element={<ProfileSettings />} />
           </Route>
         </Route>
-        {/* Dynamic Routing for Blog Post */}
-        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );
