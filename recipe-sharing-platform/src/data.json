@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "title": "Beef Stroganoff",
+    "summary": "Tender strips of beef cooked in a creamy mushroom sauce, served over egg noodles.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "title": "Vegetable Stir Fry",
+    "summary": "A colorful mix of fresh vegetables stir-fried in a savory sauce, served with rice.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "title": "Chocolate Chip Cookies",
+    "summary": "Classic cookies loaded with chocolate chips, perfect for a sweet treat.",
+    "image": "https://via.placeholder.com/150"
+  }
+]
