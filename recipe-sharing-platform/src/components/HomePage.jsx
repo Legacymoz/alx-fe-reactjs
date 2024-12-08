@@ -1,10 +1,10 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const MyHomePage = () => {
- const [recipes, setRecipes] = useState([]);
- const [loading, setLoading] = useState(true);
- const [error, setError] = useState(null);
+const HomePage = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -33,8 +33,6 @@ const MyHomePage = () => {
     return <div>Error: {error}</div>;
   }
 
-  console.log(recipes)
-
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl text-center font-bold mb-6">
@@ -46,19 +44,21 @@ const MyHomePage = () => {
             key={recipe.id}
             className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-200 hover:scale-105 hover:shadow-lg"
           >
-            <img
-              src={recipe.image}
-              alt={recipe.title}
-              className="w-full h-48 object-cover"
-            />
-            <h2 className="text-xl font-semibold">{recipe.title}</h2>
-            <p className="text-gray-600 mt-2">{recipe.summary}</p>
-            <a
-              href={`/recipes/${recipe.id}`}
+            <Link to={`/recipe/${recipe.id}`}>
+              <img
+                src={recipe.image}
+                alt={recipe.title}
+                className="w-full h-48 object-cover"
+              />
+              <h2 className="text-xl font-semibold">{recipe.title}</h2>
+              <p className="text-gray-600 mt-2">{recipe.summary}</p>
+            </Link>
+            <Link
+              to={`/recipe/${recipe.id}`}
               className="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200"
             >
               View Recipe
-            </a>
+            </Link>
           </div>
         ))}
       </div>
@@ -66,4 +66,4 @@ const MyHomePage = () => {
   );
 };
 
-export default MyHomePage
+export default HomePage;

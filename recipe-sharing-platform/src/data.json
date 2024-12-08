@@ -3,30 +3,151 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g pecorino cheese",
+      "50g parmesan cheese",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Cook the spaghetti in salted boiling water until al dente.",
+      "In a pan, cook the pancetta until crispy.",
+      "In a bowl, whisk together the eggs, pecorino, and parmesan.",
+      "Drain the spaghetti and add it to the pan with pancetta.",
+      "Remove from heat and quickly mix in the egg mixture.",
+      "Serve immediately with extra cheese and black pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "200g yogurt",
+      "2 tablespoons tikka masala paste",
+      "1 onion, chopped",
+      "2 garlic cloves, minced",
+      "1 inch ginger, grated",
+      "400g canned tomatoes",
+      "200ml coconut milk",
+      "Fresh coriander for garnish",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Marinate the chicken in yogurt and tikka masala paste for at least 1 hour.",
+      "Grill the chicken until cooked through.",
+      "In a pan, sauté onion, garlic, and ginger until soft.",
+      "Add canned tomatoes and coconut milk, and simmer for 10 minutes.",
+      "Add the grilled chicken to the sauce and cook for another 5 minutes.",
+      "Garnish with fresh coriander and serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Beef Stroganoff",
-    "summary": "Tender strips of beef cooked in a creamy mushroom sauce, served over egg noodles.",
-    "image": "https://via.placeholder.com/150"
+    "summary": "A creamy and savory dish made with tender beef, mushrooms, and onions.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "500g beef sirloin, sliced",
+      "1 onion, sliced",
+      "200g mushrooms, sliced",
+      "2 tablespoons flour",
+      "300ml beef broth",
+      "200ml sour cream",
+      "2 tablespoons mustard",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "In a pan, brown the beef slices and set aside.",
+      "In the same pan, sauté onions and mushrooms until soft.",
+      "Sprinkle flour over the vegetables and stir well.",
+      "Gradually add beef broth, stirring until thickened.",
+      "Return the beef to the pan and stir in sour cream and mustard.",
+      "Season with salt and pepper, and garnish with parsley before serving."
+    ]
   },
   {
     "id": 4,
     "title": "Vegetable Stir Fry",
-    "summary": "A colorful mix of fresh vegetables stir-fried in a savory sauce, served with rice.",
-    "image": "https://via.placeholder.com/150"
+    "summary": "A quick and healthy dish made with a variety of fresh vegetables and soy sauce.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "1 bell pepper, sliced",
+      "1 carrot, julienned",
+      "100g broccoli florets",
+      "100g snap peas",
+      "2 tablespoons soy sauce",
+      "1 tablespoon sesame oil",
+      "2 garlic cloves, minced",
+      "Salt and pepper to taste",
+      "Sesame seeds for garnish"
+    ],
+    "instructions": [
+      "Heat sesame oil in a pan over medium heat.",
+      "Add garlic and sauté for 1 minute.",
+      "Add all the vegetables and stir-fry for 5-7 minutes.",
+      "Pour in soy sauce and stir well to combine.",
+      "Season with salt and pepper, and garnish with sesame seeds before serving."
+    ]
   },
   {
     "id": 5,
+    "title": "Shrimp Tacos",
+    "summary": "Delicious tacos filled with seasoned shrimp, fresh vegetables, and a zesty sauce.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "400g shrimp, peeled and deveined",
+      "1 tablespoon olive oil",
+      "1 teaspoon chili powder",
+      "1 teaspoon cumin",
+      "Salt and pepper to taste",
+      "8 small corn tortillas",
+      "1 cup cabbage, shredded",
+      "1 avocado, sliced",
+      "Fresh cilantro for garnish",
+      "Lime wedges for serving"
+    ],
+    "instructions": [
+      "In a bowl, toss the shrimp with olive oil, chili powder, cumin, salt, and pepper.",
+      "Heat a skillet over medium heat and cook the shrimp for 2-3 minutes on each side until pink and cooked through.",
+      "Warm the corn tortillas in a separate pan or microwave.",
+      "Assemble the tacos by placing shrimp on each tortilla, topped with shredded cabbage and avocado slices.",
+      "Garnish with fresh cilantro and serve with lime wedges."
+    ]
+  },
+  {
+    "id": 6,
     "title": "Chocolate Chip Cookies",
-    "summary": "Classic cookies loaded with chocolate chips, perfect for a sweet treat.",
-    "image": "https://via.placeholder.com/150"
+    "summary": "Classic homemade cookies loaded with chocolate chips, perfect for any occasion.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "250g all-purpose flour",
+      "1/2 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "115g unsalted butter, softened",
+      "100g brown sugar",
+      "50g granulated sugar",
+      "1 teaspoon vanilla extract",
+      "1 large egg",
+      "200g chocolate chips"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "In a bowl, whisk together flour, baking soda, and salt.",
+      "In another bowl, cream together the butter, brown sugar, and granulated sugar until smooth.",
+      "Beat in the vanilla extract and egg until well combined.",
+      "Gradually add the dry ingredients to the wet ingredients and mix until just combined.",
+      "Fold in the chocolate chips.",
+      "Drop spoonfuls of dough onto a baking sheet lined with parchment paper.",
+      "Bake for 10-12 minutes or until the edges are golden brown.",
+      "Let cool on the baking sheet for a few minutes before transferring to a wire rack."
+    ]
   }
 ]
