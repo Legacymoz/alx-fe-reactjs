@@ -4,7 +4,7 @@ import data from "/src/data.json";
 const AddRecipeForm = () => {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
-  const [instructions, setInstructions] = useState("");
+  const [steps, setSteps] = useState("");
   const [summary, setSummary] = useState("");
   const [image, setImage] = useState("https://via.placeholder.com/150");
   const [errors, setErrors] = useState({});
@@ -13,7 +13,7 @@ const AddRecipeForm = () => {
     const newErrors = {};
     if (!title) newErrors.title = "Title is required";
     if (!ingredients) newErrors.ingredients = "Ingredients are required";
-    if (!instructions) newErrors.instructions = "Instructions are required";
+    if (!steps) newErrors.steps = "Steps are required";
     if (!summary) newErrors.summary = "Summary is required";
 
     if (ingredients && ingredients.split("\n").length < 2)
@@ -30,7 +30,7 @@ const AddRecipeForm = () => {
         title,
         summary,
         image,
-        instructions,
+        steps,
         ingredients: ingredients.split("\n"),
       };
       data.push(newRecipe);
@@ -114,18 +114,18 @@ const AddRecipeForm = () => {
         )}
       </div>
       <div className="flex flex-col">
-        <label className="text-sm font-medium text-black" htmlFor="instructions">
-          Instructions:
+        <label className="text-sm font-medium text-black" htmlFor="steps">
+          Steps:
         </label>
         <textarea
-          id="instructions"
-          value={instructions}
-          onChange={(event) => setInstructions(event.target.value)}
+          id="steps"
+          value={steps}
+          onChange={(event) => setSteps(event.target.value)}
           className="w-full p-2 pl-10 text-sm border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
           style={{ backgroundColor: "white", color: "black" }}
         />
-        {errors.instructions && (
-          <div className="text-red-500 text-sm">{errors.instructions}</div>
+        {errors.steps && (
+          <div className="text-red-500 text-sm">{errors.steps}</div>
         )}
       </div>
       <button
@@ -140,3 +140,4 @@ const AddRecipeForm = () => {
 };
 
 export default AddRecipeForm;
+      
